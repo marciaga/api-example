@@ -14,7 +14,7 @@ that will tunnel into the running `api` container and start a shell. Then, you'l
 ```
 $ node scripts/addUser.js
 ```
-Take note of the username and plaintext password in the `addUser.js` script so you can use them via an HTTP client to hit the `/authorization` endpoint and obtain a valid JWT which will allow you to make calls to the application.
+Take note of the username and plaintext password in the `addUser.js` script so you can use them via an HTTP client to hit the `/users/authenticate` endpoint and obtain a valid JWT which will allow you to make calls to the application.
 
 # Run the App
 
@@ -39,3 +39,12 @@ run eslint:
 ```
 $ npm run lint
 ```
+
+# Roadmap
+* Add tests
+* Add limit and sort params to products GET
+* Add logging solution
+* CI/CD
+* Ensure uniform response payloads
+* Consider Babel transpilation step in order to add ES2020 proposals
+* Add better security headers

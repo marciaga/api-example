@@ -19,11 +19,11 @@ const schema = {
 */
 
 const idSchema = Joi.object({
-  id: Joi.string().length(24).required(),
+  id: Joi.string().required(),
 });
 
 const authenticateSchema = Joi.object({
-  name: Joi.string().required(),
+  username: Joi.string().required(),
   password: Joi.string().required(),
 });
 
