@@ -15,7 +15,10 @@ export const authorize = (roles = []) => {
   return [
     // authenticate JWT token and attach user to request object (req.user)
     // { sub, iat role }
-    expressJwt({ secret }),
+    expressJwt({
+      secret,
+      algorithms: ['HS256'],
+    }),
     // authorize based on user role
     (req, res, next) => {
       if (roles.length && !roles.includes(req.user.role)) {
